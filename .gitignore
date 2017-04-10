@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.vagrant
+saltstack/keys
+saltstack/salt/99-custom.rules

@@ -1,0 +1,9 @@
+{
+  "local_printing_enable": true,
+  "cloud_printing_enable": true,
+  "xmpp_jid": "05cba9d3f9d937938bb82b51a635cf68@cloudprint.googleusercontent.com",
+  "robot_refresh_token": "1/pD3_txalnJceo0gpGd348iLSpJ0A2IsXrim1Zt6lyhA",
+  "proxy_name": "d1d7eb12-eeed-43b9-9da5-4d3ec381e36b",
+  "log_level": "INFO",
+  "log_file_name": "/tmp/cloud-print-connector"
+}
