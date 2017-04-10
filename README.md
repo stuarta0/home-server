@@ -12,14 +12,14 @@
 
 1. Install from server image (include OpenSSH server). Create desired logon user for non-privileged use later.
 1. To get salt running, follow the instructions here (https://docs.saltstack.com/en/latest/topics/tutorials/quickstart.html): 
-
+    ```
     curl -L https://bootstrap.saltstack.com -o bootstrap_salt.sh
     chmod 755 bootstrap_salt.sh
     sudo sh bootstrap_salt.sh
-
+    ```
 1. Change ```file_client: local``` in ```/etc/salt/minion```
 1. Now copy over the salt scripts (the following was using a USB drive):
-
+    ```
     sudo fdisk -l #get list of devices to find USB with salt code
     sudo mkdir /media/external
     sudo mount /dev/sdc1 /media/external
@@ -27,7 +27,7 @@
     sudo cp -r /media/external/salstack/salt /srv
     shutdown -r now #unplug USB drive to ensure /dev/sdb is the storage drive
     sudo salt-call state.highstate
-
+    ```
 ## Manual setup after salt provisioning
 
 ### Google Cloud Print
