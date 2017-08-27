@@ -1,0 +1,14 @@
+[Unit]
+Description=Minio Server
+Documentation="https://docs.minio.io/"
+After=avahi-daemon.service network-online.target
+Wants=avahi-daemon.service network-online.target
+
+[Service]
+EnvironmentFile=/etc/minio/%i/.env
+ExecStart=/usr/local/bin/minio server --address $MINIO_ADDRESS --config-dir /etc/minio/%i /store/minio/%i
+Restart=on-failure
+User=minio
+
+[Install]
+WantedBy=multi-user.target

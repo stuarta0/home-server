@@ -4,7 +4,8 @@ base:
     - isp
     - store
     - syncthing
-    - crashplan
+    #- crashplan
+    - minio
     - cups
     - cups.gcp
     - nginx.rtmp

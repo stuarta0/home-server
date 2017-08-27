@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     server.vm.network "private_network", ip: "192.168.50.201"
     
     ## For masterless, mount your salt file root
-    server.vm.synced_folder "saltstack/salt/", "/srv/salt/"
+    server.vm.synced_folder "saltstack/", "/srv/"
 
     ## Use all the defaults:
     server.vm.provision :salt do |salt|
