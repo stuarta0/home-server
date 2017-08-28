@@ -1,14 +1,15 @@
 base:
+  'vagrant-server':
+    - store.vm
+  'home-server':
+    - store.prod
   '*':
+    - users
     - common
     - isp
-    - store
     - syncthing
-    #- crashplan
     - minio
     - cups
     - cups.gcp
     - nginx.rtmp
     - samba
-  'vagrant-server':
-    - user

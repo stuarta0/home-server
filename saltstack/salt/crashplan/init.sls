@@ -13,7 +13,7 @@ crashplan:
     - group: crashplan
     - dir_mode: 755
         
-/store/crashplan:
+{{ salt['pillar.get']('store:location', '') }}/crashplan:
   file.directory:
     - user: crashplan
     - group: crashplan

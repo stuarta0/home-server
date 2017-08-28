@@ -7,7 +7,7 @@ install:
     - name: btsync
     # user/group btsync:btsync automatically created
   file.directory:
-    - name: /store/btsync
+    - name: {{ salt['pillar.get']('store:location', '') }}/btsync
     - user: btsync
     - group: btsync
     - dir_mode: 755

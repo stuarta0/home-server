@@ -38,6 +38,8 @@
 
 ### CrashPlan
 
+CrashPlan for Home is being phased out. Duplicati+Minio will replace CrashPlan for our needs.
+
 * https://support.code42.com/CrashPlan/4/Getting_Started/Installing_The_Code42_CrashPlan_App#Linux
 * https://support.code42.com/CrashPlan/4/Configuring/Using_CrashPlan_On_A_Headless_Computer
 

@@ -15,7 +15,7 @@ minio:
     - groups:
       - minio
 
-/store/minio:
+{{ salt['pillar.get']('store:location', '') }}/minio:
   file.directory:
     - makedirs: True
     - user: minio
@@ -34,7 +34,7 @@ minio:
     - source: salt://minio/files/minio@.service
     - mode: 644
 
-{% for name, args in salt.pillar.get('minio:instances', {}).items() %}
+{% for name, args in salt['pillar.get']('minio:accounts', {}).items() %}
 
 /etc/minio/{{ name }}:
   file.directory:
@@ -53,6 +53,7 @@ minio:
     - template: jinja
     - context:
         address: ":{{ args.port }}"
+        store: {{ salt['pillar.get']('store:location', '/') }}
 
 /etc/minio/{{ name }}/config.json:
   file.managed:

@@ -3,7 +3,7 @@
 samba:
   pkg.installed
 
-/store/samba/storage:
+{{ salt['pillar.get']('store:location', '') }}/samba/storage:
   file.directory:
     - makedirs: True
     - user: nobody

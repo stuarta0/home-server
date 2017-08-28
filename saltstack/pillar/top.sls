@@ -1,3 +1,5 @@
 base:
   '*':
+    - users
+    - store
     - minio

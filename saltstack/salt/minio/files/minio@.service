@@ -1,5 +1,5 @@
 [Unit]
-Description=Minio Server
+Description=Minio Server for account %I
 Documentation="https://docs.minio.io/"
 After=avahi-daemon.service network-online.target
 Wants=avahi-daemon.service network-online.target
