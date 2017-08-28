@@ -34,6 +34,22 @@ minio:
     - source: salt://minio/files/minio@.service
     - mode: 644
 
+/etc/nginx/sites-available/minio.conf:
+  file.managed:
+    - source: salt://minio/files/nginx-reverse-proxy.conf
+    - template: jinja
+    - user: nginx
+    - group: nginx
+    - mode: 644
+    - makedirs: True
+
+/etc/nginx/sites-enabled/minio.conf:
+  file.symlink:
+    - target: /etc/nginx/sites-available/minio.conf
+    - user: nginx
+    - group: nginx
+    - makedirs: True
+
 {% for name, args in salt['pillar.get']('minio:accounts', {}).items() %}
 
 /etc/minio/{{ name }}:
