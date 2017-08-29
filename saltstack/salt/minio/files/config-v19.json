@@ -4,7 +4,7 @@
 		"accessKey": "{{ key }}",
 		"secretKey": "{{ secret }}"
 	},
-	"region": "",
+	"region": "ap-southeast-2",
 	"browser": "on",
 	"logger": {
 		"console": {

@@ -70,6 +70,13 @@ cp stat.xsl /usr/local/nginx/html:
   file.managed:
     - source: salt://nginx/files/nginx.conf
     
+/var/log/nginx/:
+  file.directory:
+    - makedirs: True
+    - user: nginx
+    - group: nginx
+    - dir_mode: 755
+
 nginx service:
   service.running:
     - name: nginx  # nginx@nginx.service

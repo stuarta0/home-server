@@ -4,6 +4,9 @@ Vagrant.configure("2") do |config|
     
     server.vm.host_name = 'vagrant-server'
     server.vm.network "private_network", ip: "192.168.50.201"
+    server.hostsupdater.aliases = [
+      "s3.encoded.xyz"
+    ]
     
     ## For masterless, mount your salt file root
     server.vm.synced_folder "saltstack/", "/srv/"
